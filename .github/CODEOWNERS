@@ -1,0 +1,9 @@
+# Specify code owners for specific files or directories
+math_functions.py @hussanmunir
+string_functions.py @hussanmunir
+test_math_functions_pytest.py @hussanmunir
+test_math_functions.py @hussanmunir
+test_string_functions_pytest.py @hussanmunir
+test_string_functions.py @hussanmunir
+test_suite.py @hussanmunir
+README.md @hussanmunir
