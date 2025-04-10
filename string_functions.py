@@ -1,3 +1,5 @@
+import re
+
 class StringFunctions:
     """A class containing basic string operations."""
 
@@ -11,5 +13,5 @@ class StringFunctions:
 
     def is_palindrome(self, s):
         """Check if a string is a palindrome."""
-        s = s.lower().replace(" ", "")
+        s = re.sub(r'[^a-zA-Z0-9]', '', s.lower())  # Remove non-alphanumeric characters and convert to lowercase
         return s == s[::-1]
