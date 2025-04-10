@@ -62,6 +62,29 @@ python -m unittest test_math_functions.py
 python -m unittest test_string_functions.py
 ```
 
+## Generating HTML Coverage Report
+
+To generate an HTML report for branch and statement coverage, follow these steps:
+
+1. **Install `pytest-cov`:**
+   Run the following command to install the `pytest-cov` plugin:
+   ```bash
+   pip install pytest-cov
+   ```
+
+2. **Run Tests with Coverage:**
+   Use the following command to run your tests and generate an HTML report:
+   ```bash
+   pytest --cov=. --cov-report=html --cov-branch
+   ```
+
+   - `--cov=.`: Specifies the directory to measure coverage for (current directory in this case).
+   - `--cov-report=html`: Generates an HTML report.
+   - `--cov-branch`: Includes branch coverage in the report.
+
+3. **View the Report:**
+   After running the command, an `htmlcov` directory will be created in your workspace. Open the `index.html` file in a web browser to view the coverage report.
+
 ## Requirements
 
 - Python 3.8 or higher
