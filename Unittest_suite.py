@@ -7,10 +7,12 @@ class TestSuiteRunner:
 
     @staticmethod
     def run():
-        """Run all test cases."""
+        """Run all test cases written in unittest."""
         suite = unittest.TestSuite()
         suite.addTests(unittest.defaultTestLoader.loadTestsFromTestCase(TestMathFunctions))
         suite.addTests(unittest.defaultTestLoader.loadTestsFromTestCase(TestStringFunctions))
+        # Note: TestMathFunctionsAdditionalPytest is a pytest test case and won't be added here.
+        # suite.addTests(unittest.defaultTestLoader.loadTestsFromTestCase(TestMathFunctionsAdditionalPytest))
     
         # Run the test suite
         runner = unittest.TextTestRunner(verbosity=2)
@@ -18,3 +20,11 @@ class TestSuiteRunner:
 
 if __name__ == "__main__":
     TestSuiteRunner.run()
+
+    """
+    pytest has backward compatibility with unittest but not vice versa.
+
+    💡 Key takeaway:
+        Use pytest as your universal runner. It can run both unittest and pytest-style tests, 
+        giving you one combined report. This is the modern, clean approach.
+    """
