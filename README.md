@@ -21,8 +21,11 @@ Unittest is Python's built-in testing framework. It provides a test discovery me
 - `test_string_functions.py`: Contains `unittest` test cases for the `StringFunctions` class.
 - `test_math_functions_pytest.py`: Contains `pytest` test cases for the `MathFunctions` class.
 - `test_string_functions_pytest.py`: Contains `pytest` test cases for the `StringFunctions` class.
-- `test_suite.py`: A test suite runner using `unittest` to execute all test cases.
+- `unit_test_suite.py`: A test suite runner using `unittest` to execute all test cases.
+- `pytest_test_suite.py`: A test suite runner using `pytest` to execute all test cases.
 - `README.md`: Provides an overview of the project, including its structure, frameworks used, and instructions for running tests.
+
+**Note: Pytest can handle test cases written in Unittest and Pytest style but not vice versa.**
 
 ## How to Run Tests
 
